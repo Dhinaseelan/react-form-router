@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 function MyForm() {
     const [pas1,Setpas1]=useState();
     const [pas2,Setpas2]=useState();
@@ -16,7 +17,7 @@ function MyForm() {
         console.log(pas1==pas2)
     }
   return (
-    <form className="p-5 border rounded bg-light form-with" style={{width:"100%"}}>
+    <form className="p-5 border rounded bg-light form-with" style={{width:"70%", margin:"auto", marginTop:"50px"}}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
@@ -84,6 +85,7 @@ function MyForm() {
       <button type="button" className="btn btn-primary" onClick={result}>
         Submit
       </button>
+      <Link className="btn btn-secondary" to={'/'} style={{marginLeft:"10px"}}>Home</Link>
     </form>
   );
 }
