@@ -1,0 +1,31 @@
+{
+    "post":[
+        {
+            "id":123,
+            "title":"fisrt post",
+            "content":"hello guys this is fisrt post",
+            "created_at":"20-04-2004"
+        },
+        {
+            "id":124,
+            "title":"second post",
+            "content":"hello guys this is second post",
+            "created_at":"22-04-2004"
+        }
+        ,
+        {
+            "id":125,
+            "title":"third post",
+            "content":"hello guys this is third post",
+            "created_at":"23-04-2004"
+        }
+        ,
+        {
+            "id":126,
+            "title":"fifth post",
+            "content":"hello guys this is fifth post",
+            "created_at":"24-04-2004"
+        }
+        
+    ]
+}
