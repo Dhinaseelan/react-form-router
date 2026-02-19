@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { datacontext } from "./Home";
 function MyForm() {
     const [pas1,Setpas1]=useState();
     const [pas2,Setpas2]=useState();
@@ -16,8 +18,10 @@ function MyForm() {
         setcheck(pas1==pas2)
         console.log(pas1==pas2)
     }
-  return (
-    <form className="p-5 border rounded bg-light form-with" style={{width:"70%", margin:"auto", marginTop:"50px"}}>
+    const data=useContext(datacontext)
+  return (<>
+  <h1>{data}</h1>
+  <form className="p-5 border rounded bg-light form-with" style={{width:"70%", margin:"auto", marginTop:"50px"}}>
       <div className="mb-3">
         <label htmlFor="name" className="form-label">
           Name
@@ -87,6 +91,8 @@ function MyForm() {
       </button>
       <Link className="btn btn-secondary" to={'/'} style={{marginLeft:"10px"}}>Home</Link>
     </form>
+  </>
+    
   );
 }
 
