@@ -38,8 +38,11 @@ function Home() {
         <Link className="btn btn-primary me-2" to={"/App"}>
           Form
         </Link>
-        <Link className="btn btn-primary " to={"/counter"}>
+        <Link className="btn btn-primary me-2" to={"/counter"}>
           Counter
+        </Link>
+        <Link className="btn btn-primary " to={"/stop"}>
+          Stopwatch
         </Link>
         <div className="row justify-content-center m-3">
           {post&&post.map((posts) => {
