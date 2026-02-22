@@ -2,9 +2,11 @@ import { createContext } from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MyForm from "./Myfrom";
+import { useNavigate } from "react-router-dom";
 export const datacontext=createContext();
 import Counter from "./counter";
 function Home() {
+  const Navigate=useNavigate()
   const data="DataData"
   const [post, setPost] = useState([]);
   useEffect(() => {
@@ -48,13 +50,14 @@ function Home() {
           {post&&post.map((posts) => {
               return (
                 <div
+                  onClick={()=>Navigate('/post/'+posts.id)}
                   key={posts.id}
-                  className="card m-3"
-                  style={{ width: "18rem" }}
+                  className="card m-3 "
+                  style={{ width: "18rem", cursor:"pointer"}}
                 >
                   <div className="card-body">
-                  <div className="card-title">{posts.title}</div>
-                  <p className="card-text">{posts.content}</p>
+                  <div className="card-title"><h2>{posts.title}</h2></div>
+                  
                   </div>
                 </div>
               );

@@ -4,6 +4,7 @@ import Home from './assets/Home.jsx'
 import Counter from './assets/counter.jsx'
 import './index.css'
 import App from './App.jsx'
+import Post from './assets/post.jsx'
 import {createBrowserRouter,RouterProvider}from 'react-router-dom'
 import Stopwatch from './assets/Stopwatch.jsx'
 const router=createBrowserRouter([
@@ -23,6 +24,10 @@ const router=createBrowserRouter([
   ,{
     path:'/stop',
     element:<Stopwatch/>
+  },
+  {
+    path:"/post/:is"
+    ,element:<Post/>
   }
 ]);
 createRoot(document.getElementById('root')).render(
